@@ -40,6 +40,22 @@ document.getElementById("btnStart").addEventListener("click", (e) => {
     },speed)
 });
 
+document.getElementById("instantSolve").addEventListener("click",e=>{
+  allInputs.forEach((inp) => {
+    if (inp.value) {
+      inp.setAttribute("disabled", true);
+    }
+  });
+  solver = new SudokuSolver(allInputs);
+  let steps = 0;
+  let sol = false;
+  while(!sol){
+    steps++;
+    sol = solver.solve();
+  }
+  stepCounter.textContent = steps;
+})
+
 document.getElementById("btnPause").addEventListener("click",(e)=>{
     if(running){
       running = false;
@@ -69,3 +85,23 @@ document.getElementById("btnReset").addEventListener("click",e=>{
 document.getElementById("inputSpeed").addEventListener("change",e=>{
   speed = 1001 - e.target.value;
 })
+
+const testArray = [
+  [5,3,0,0,7,0,0,0,0],
+  [6,0,0,1,9,5,0,0,0],
+  [0,9,8,0,0,0,0,6,0],
+  [8,0,0,0,6,0,0,0,3],
+  [4,0,0,8,0,3,0,0,1],
+  [7,0,0,0,2,0,0,0,6],
+  [0,6,0,0,0,0,2,8,0],
+  [0,0,0,4,1,9,0,0,5],
+  [0,0,0,0,8,0,0,7,9]
+];
+const arrayToInputs = (arr) =>{
+  if(arr.length !== 9 || arr[0].length !== 9) return;
+  for(let i = 0; i<9; i++){
+    for(let j=0; j<9; j++) {
+      allInputs[map2D(i,j)].value = arr[i][j] || "";
+    }
+  }
+}

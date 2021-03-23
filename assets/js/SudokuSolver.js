@@ -120,6 +120,8 @@ class SudokuSolver {
         this.clearHighlights();
         // while(this.currentIdx<81) {
         let idx = this.currentIdx;
+        if(idx === 81) 
+            return true;
         if(this.inputs[idx].getAttribute("disabled")){
             this.currentIdx += 1 * this.direction;
             return false;
@@ -136,7 +138,6 @@ class SudokuSolver {
         if(this.check(idx,value+1)){
             this.currentIdx++;
         }
-        if(this.currentIdx === 82) 
-            return true;
+        
     }
 }
