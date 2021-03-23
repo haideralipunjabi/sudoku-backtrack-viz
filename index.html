@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Sudoku Backtrack Visualization</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-block-end: 0;">Sudoku Backtracking Visualization</h1>
+        <h2><a href="https://sudokuviz.netlify.app">sudokuviz.netlify.app</a></h2>
+        <div id="grid">
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+            <div class="cell"><input type="text" maxlength="1"></div>
+        </div>
+        <div class="controls">
+            <button id="btnStart">Start</button>
+            <button id="btnPause" disabled>Pause</button>
+            <button id="btnReset">Reset</button>
+            <label for="inputSpeed">Speed</label>
+            <input min="1" max="1000" value="1" type="range" name="inputSpeed" id="inputSpeed">
+        </div>
+        <h2 style="margin-block-end: 0;">Steps: <span id="stepCounter"></span></h2>
+        <h4>Made with ♥ by <a href="https://haideralipunjabi.com" target="_blank" rel="noopener noreferrer">Haider Ali Punjabi</a> | <a href="https://github.com/haideralipunjabi/sudoku-backtrack-viz" target="_blank" rel="noopener noreferrer">Github Repo</a></h4>
+    </div>
+    <script src="assets/js/SudokuSolver.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

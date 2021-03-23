@@ -1,0 +1,82 @@
+:root{
+    --box-size : 80px;
+    --sub-green-background: #C8E6C9;
+    --green-background: #A5D6A7;
+    --green-border: #1B5E20;
+    --sub-red-background: #ffcdd2;
+    --red-background: #ef9a9a;
+    --red-border: #b71c1c;
+    --disabled-background: #B0BEC5;
+}
+html,body {
+    font-family: Roboto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.controls  * {
+    margin: 10px;
+}
+
+.controls  button,label {
+    font-size: calc(.3 * var(--box-size));
+}
+#grid {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(9,calc(var(--box-size)));
+    margin: auto;
+    width: calc(9*var(--box-size));
+}
+.cell {
+    border: 1px solid black;
+    width: var(--box-size);
+    height: var(--box-size);
+}
+
+.cell>input {
+    border: none;
+    background: none;
+    height: var(--box-size);
+    line-height: var(--box-size);
+    font-size: var(--box-size);
+    width: var(--box-size);
+    padding: 0;
+    text-align: center;
+}
+
+.cell>input:active,.cell>input:focus {
+    border: none;
+    outline: none;
+    
+}
+.greenHighlight {
+    background-color: var(--green-background);
+    border: 1px solid var(--green-border);
+}
+.subGreenHighlight {
+    background-color: var(--sub-green-background);
+    border: 1px solid var(--green-border);
+}
+
+.redHighlight {
+    background-color: var(--red-background);
+    border: 1px solid var(--red-border);
+}
+.subRedHighlight{
+    background-color: var(--sub-red-background);
+    border: 1px solid var(--red-border);
+}
+.cell > input:disabled {
+    background-color: var(--disabled-background);
+    color: black;
+}
